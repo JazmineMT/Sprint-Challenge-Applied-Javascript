@@ -11,9 +11,8 @@
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
 
-    console.log(response.data)
     tabMaker(response.data)
-
+    
     response.data.topics.forEach(item =>{
     tabMaker(item)
     const tabContainer = document.querySelector('.topics')
